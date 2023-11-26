@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddCarFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/etYearAddCarFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="year..."
+            android:inputType="text"
+            app:layout_constraintStart_toStartOf="@+id/etColorAddCarFragment" />
+
+        <EditText
+            android:id="@+id/etColorAddCarFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="color..."
+            android:inputType="text"
+            app:layout_constraintStart_toStartOf="@+id/etModelAddCarFragment"
+            tools:layout_editor_absoluteY="45dp" />
+
+        <EditText
+            android:id="@+id/etModelAddCarFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="model..."
+            android:inputType="text"
+            app:layout_constraintStart_toStartOf="@+id/etMnAddCarFragment"
+            tools:layout_editor_absoluteY="90dp" />
+
+        <EditText
+            android:id="@+id/etMnAddCarFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="MN..."
+            android:inputType="text"
+            app:layout_constraintStart_toStartOf="@+id/etHPAddCarFragment"
+            tools:layout_editor_absoluteY="195dp" />
+
+        <EditText
+            android:id="@+id/etHPAddCarFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="HP..."
+            android:inputType="text"
+            app:layout_constraintStart_toStartOf="@+id/etPriceAddCarFragment"
+            tools:layout_editor_absoluteY="267dp" />
+
+        <EditText
+            android:id="@+id/etPriceAddCarFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="price..."
+            android:inputType="text"
+            app:layout_constraintStart_toStartOf="@+id/etCilanderAddCarFragment"
+            tools:layout_editor_absoluteY="366dp" />
+
+        <EditText
+            android:id="@+id/etCilanderAddCarFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="cylinder..."
+            android:inputType="text"
+            app:layout_constraintStart_toStartOf="@+id/etEngineAddCarFragment"
+            tools:layout_editor_absoluteY="453dp" />
+
+        <EditText
+            android:id="@+id/etEngineAddCarFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="engine displacement..."
+            android:inputType="text"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="544dp" />
+
+        <Button
+            android:id="@+id/btnAddAddCarFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADD"
+            tools:layout_editor_absoluteX="153dp"
+            tools:layout_editor_absoluteY="636dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

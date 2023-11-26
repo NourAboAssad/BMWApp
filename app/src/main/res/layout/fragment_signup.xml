@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backbmw"
+
+    tools:context=".SignupFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <EditText
+            android:id="@+id/etUsernameSignup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="#30FF"
+            android:drawableLeft="@drawable/baseline_person_outline_24"
+            android:drawablePadding="20dp"
+            android:ems="10"
+            android:hint="username..."
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            android:textColorHint="#F3EDED"
+            app:layout_constraintBottom_toTopOf="@+id/etPasswordSignup"
+            app:layout_constraintStart_toStartOf="@+id/etPasswordSignup" />
+
+        <Button
+            android:id="@+id/btnSignupSignup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="124dp"
+            android:backgroundTint="#12A395"
+            android:text="signup"
+            app:layout_constraintEnd_toEndOf="@+id/etPasswordSignup"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="@+id/etPasswordSignup"
+            app:layout_constraintTop_toBottomOf="@+id/etPasswordSignup" />
+
+        <EditText
+            android:id="@+id/etPasswordSignup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="348dp"
+            android:background="#30ff"
+            android:drawableLeft="@drawable/baseline_info_24"
+            android:drawablePadding="20dp"
+            android:ems="10"
+            android:hint="password..."
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:textColorHint="#E8E2E2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.477"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/etRePasswordSignup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="420dp"
+            android:background="#30ff"
+            android:drawableLeft="@drawable/baseline_info_24"
+            android:drawablePadding="20dp"
+            android:ems="10"
+            android:hint="Re_password..."
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:textColorHint="#E6E4E4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.477"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
