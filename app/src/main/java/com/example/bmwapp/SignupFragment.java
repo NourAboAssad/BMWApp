@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -93,6 +94,7 @@ public class SignupFragment extends Fragment {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
                             Toast.makeText(getActivity(), "you have successfully signed up!", Toast.LENGTH_SHORT).show();
+                            gotoSeriesListFragment();
 
                         } else {
                             Toast.makeText(getActivity(), "you have successfully signup!", Toast.LENGTH_SHORT).show();
@@ -102,5 +104,10 @@ public class SignupFragment extends Fragment {
 
             }
         });
+    }
+    private void gotoSeriesListFragment() {
+        FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.FrameLayoutMain,new SeriesListFragment());
+        ft.commit();
     }
 }

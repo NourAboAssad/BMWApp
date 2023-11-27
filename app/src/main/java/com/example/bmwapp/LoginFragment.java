@@ -112,6 +112,7 @@ public class LoginFragment extends Fragment {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
                             Toast.makeText(getActivity(), "you have successfully logged in!", Toast.LENGTH_SHORT).show();
+                            gotoSeriesListFragment();
 
                         }else {
                             Toast.makeText(getActivity(), " Failed to login!", Toast.LENGTH_SHORT).show();
@@ -131,6 +132,11 @@ public class LoginFragment extends Fragment {
     private void gotoFFragment() {
         FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.FrameLayoutMain,new FFragment());
+        ft.commit();
+    }
+    private void gotoSeriesListFragment() {
+        FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.FrameLayoutMain,new SeriesListFragment());
         ft.commit();
     }
 }
