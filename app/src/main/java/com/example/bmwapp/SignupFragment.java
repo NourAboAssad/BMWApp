@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -26,6 +27,7 @@ public class SignupFragment extends Fragment {
     private EditText etUsername,etPassword;
     private Button btnSignup;
     private FirebaseServices fbs;
+    private ImageView btnBack;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -80,6 +82,13 @@ public class SignupFragment extends Fragment {
         etPassword=getView().findViewById(R.id.etPasswordSignup);
         etUsername=getView().findViewById(R.id.etUsernameSignup);
         btnSignup=getView().findViewById(R.id.btnSignupSignup);
+        btnBack=getView().findViewById(R.id.btnBackFFragment);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoLoginFragment();
+            }
+        });
         btnSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -108,6 +117,11 @@ public class SignupFragment extends Fragment {
     private void gotoSeriesListFragment() {
         FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.FrameLayoutMain,new SeriesListFragment());
+        ft.commit();
+    }
+    private void gotoLoginFragment() {
+        FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.FrameLayoutMain,new LoginFragment());
         ft.commit();
     }
 }
