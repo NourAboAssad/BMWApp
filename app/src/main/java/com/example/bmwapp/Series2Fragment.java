@@ -3,10 +3,14 @@ package com.example.bmwapp;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -14,6 +18,9 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class Series2Fragment extends Fragment {
+    private TextView tvM240i,tvM240iPrice;
+    private ImageView ivSeries2,ivM240i;
+    private Button btnPColor,btnWColor;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -60,5 +67,39 @@ public class Series2Fragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_series2, container, false);
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        ivSeries2=getView().findViewById(R.id.imSeries2Series2);
+       ivM240i=getView().findViewById(R.id.ivm240iwSeries2);
+        tvM240i=getView().findViewById(R.id.tvM240iSeries2);
+        tvM240iPrice=getView().findViewById(R.id.tvM240PraiceSeries2);
+        btnWColor=getView().findViewById(R.id.btnWColorSeries2);
+        btnPColor=getView().findViewById(R.id.btnPColorSeries2);
+        btnWColor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoM240iWhiteFragment();
+            }
+        });
+        btnPColor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoM240iPurpleFragment();
+
+            }
+        });
+    }
+    private void gotoM240iWhiteFragment() {
+        FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.FrameLayoutMain,new M240iWhiteFragment());
+        ft.commit();
+    }
+    private void gotoM240iPurpleFragment() {
+        FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.FrameLayoutMain,new M240iPurpleFragment());
+        ft.commit();
     }
 }

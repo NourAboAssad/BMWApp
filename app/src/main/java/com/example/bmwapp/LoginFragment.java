@@ -139,4 +139,5 @@ public class LoginFragment extends Fragment {
         ft.replace(R.id.FrameLayoutMain,new SeriesListFragment());
         ft.commit();
     }
+
 }

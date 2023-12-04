@@ -1,14 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Series2Fragment">
+    android:background="@color/white"
+    tools:context=".SeriesListFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/tvM240iSeries2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoSizeTextType="none"
+        android:elegantTextHeight="true"
+        android:text="M240i  2023"
+        android:textColor="#070707"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="247dp"
+        tools:layout_editor_absoluteY="182dp" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/tvM240PraiceSeries2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$108,000"
+        android:textColor="#0B0A0A"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="275dp"
+        tools:layout_editor_absoluteY="250dp" />
+
+
+
+    <Button
+        android:id="@+id/btnWColorSeries2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#F3ECEC"
+        tools:layout_editor_absoluteX="247dp"
+        tools:layout_editor_absoluteY="311dp" />
+
+    <Button
+        android:id="@+id/btnPColorSeries2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#482E73"
+        tools:layout_editor_absoluteX="329dp"
+        tools:layout_editor_absoluteY="311dp" />
+
+    <ImageView
+        android:id="@+id/imSeries2Series2"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/img_1"
+        tools:layout_editor_absoluteX="105dp"
+        tools:layout_editor_absoluteY="-7dp" />
+
+    <TextView
+        android:id="@+id/tvMComSeries2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="M2 competition 2023"
+        android:textColor="#090909"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="181dp"
+        tools:layout_editor_absoluteY="421dp" />
+
+    <TextView
+        android:id="@+id/tvMComPraiceSeries2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$123,000"
+        android:textColor="#090909"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="262dp"
+        tools:layout_editor_absoluteY="481dp" />
+
+    <Button
+        android:id="@+id/btnBlackSeries2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@color/black"
+        tools:layout_editor_absoluteX="247dp"
+        tools:layout_editor_absoluteY="535dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="Button"
+        tools:layout_editor_absoluteX="318dp"
+        tools:layout_editor_absoluteY="535dp" />
+
+    <ImageView
+        android:id="@+id/ivm240iwSeries2"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/m240iw"
+        tools:layout_editor_absoluteX="-3dp"
+        tools:layout_editor_absoluteY="136dp" />
+
+    <ImageView
+        android:id="@+id/ivmComBlackSeries2"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/m2comb"
+        tools:layout_editor_absoluteX="-3dp"
+        tools:layout_editor_absoluteY="408dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -106,7 +106,7 @@ public class SignupFragment extends Fragment {
                             gotoSeriesListFragment();
 
                         } else {
-                            Toast.makeText(getActivity(), "you have successfully signup!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getActivity(), "you have unsuccessfully signup!", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
