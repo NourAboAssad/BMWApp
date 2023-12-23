@@ -12,10 +12,10 @@ import android.widget.ImageView;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link M240iWhiteFragment#newInstance} factory method to
+ * Use the {@link M2competitionBlackFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class M240iWhiteFragment extends Fragment {
+public class M2competitionBlackFragment extends Fragment {
     private ImageView btnBack;
 
     // TODO: Rename parameter arguments, choose names that match
@@ -27,7 +27,7 @@ public class M240iWhiteFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public M240iWhiteFragment() {
+    public M2competitionBlackFragment() {
         // Required empty public constructor
     }
 
@@ -37,11 +37,11 @@ public class M240iWhiteFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment M240iWhiteFragment.
+     * @return A new instance of fragment M2competitionBlackFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static M240iWhiteFragment newInstance(String param1, String param2) {
-        M240iWhiteFragment fragment = new M240iWhiteFragment();
+    public static M2competitionBlackFragment newInstance(String param1, String param2) {
+        M2competitionBlackFragment fragment = new M2competitionBlackFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -62,13 +62,12 @@ public class M240iWhiteFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_m240i_white, container, false);
+        return inflater.inflate(R.layout.fragment_m2competition_black, container, false);
     }
-
     @Override
     public void onStart() {
         super.onStart();
-        btnBack=getView().findViewById(R.id.btnBackM240iW);
+        btnBack=getView().findViewById(R.id.btnBackM2competitionBlack);
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

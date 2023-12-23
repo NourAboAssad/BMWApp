@@ -3,20 +3,17 @@ package com.example.bmwapp;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link M240iWhiteFragment#newInstance} factory method to
+ * Use the {@link M2competitionGrayFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class M240iWhiteFragment extends Fragment {
-    private ImageView btnBack;
+public class M2competitionGrayFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -27,7 +24,7 @@ public class M240iWhiteFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public M240iWhiteFragment() {
+    public M2competitionGrayFragment() {
         // Required empty public constructor
     }
 
@@ -37,11 +34,11 @@ public class M240iWhiteFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment M240iWhiteFragment.
+     * @return A new instance of fragment M2competitionGrayFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static M240iWhiteFragment newInstance(String param1, String param2) {
-        M240iWhiteFragment fragment = new M240iWhiteFragment();
+    public static M2competitionGrayFragment newInstance(String param1, String param2) {
+        M2competitionGrayFragment fragment = new M2competitionGrayFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -62,23 +59,6 @@ public class M240iWhiteFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_m240i_white, container, false);
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        btnBack=getView().findViewById(R.id.btnBackM240iW);
-        btnBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                gotoSeries2Fragment();
-            }
-        });
-    }
-    private void gotoSeries2Fragment() {
-        FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
-        ft.replace(R.id.FrameLayoutMain,new Series2Fragment());
-        ft.commit();
+        return inflater.inflate(R.layout.fragment_m2competition_gray, container, false);
     }
 }

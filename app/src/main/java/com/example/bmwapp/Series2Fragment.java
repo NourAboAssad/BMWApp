@@ -20,7 +20,8 @@ import android.widget.TextView;
 public class Series2Fragment extends Fragment {
     private TextView tvM240i,tvM240iPrice;
     private ImageView ivSeries2,ivM240i;
-    private Button btnPColor,btnWColor;
+    private Button btnPColor,btnWColor,btnBColor,btnGColor;
+    private ImageView btnBack;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -78,6 +79,28 @@ public class Series2Fragment extends Fragment {
         tvM240iPrice=getView().findViewById(R.id.tvM240PraiceSeries2);
         btnWColor=getView().findViewById(R.id.btnWColorSeries2);
         btnPColor=getView().findViewById(R.id.btnPColorSeries2);
+        btnBack=getView().findViewById(R.id.btnBackSeries2);
+        btnBColor=getView().findViewById(R.id.btnBlackSeries2);
+        btnGColor=getView().findViewById(R.id.btnGraySeries2);
+        btnBColor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoM2competitionBlackFragment();
+            }
+        });
+        btnGColor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoM2competitionGrayFragment();
+
+            }
+        });
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoSeriesListFragment();
+            }
+        });
         btnWColor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -100,6 +123,21 @@ public class Series2Fragment extends Fragment {
     private void gotoM240iPurpleFragment() {
         FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.FrameLayoutMain,new M240iPurpleFragment());
+        ft.commit();
+    }
+    private void gotoSeriesListFragment() {
+        FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.FrameLayoutMain,new SeriesListFragment());
+        ft.commit();
+    }
+    private void gotoM2competitionBlackFragment() {
+        FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.FrameLayoutMain,new M2competitionBlackFragment());
+        ft.commit();
+    }
+    private void gotoM2competitionGrayFragment() {
+        FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.FrameLayoutMain,new M2competitionGrayFragment());
         ft.commit();
     }
 }
