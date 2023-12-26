@@ -18,9 +18,8 @@ import android.widget.TextView;
  * create an instance of this fragment.
  */
 public class Series2Fragment extends Fragment {
-    private TextView tvM240i,tvM240iPrice;
-    private ImageView ivSeries2,ivM240i;
-    private Button btnPColor,btnWColor,btnBColor,btnGColor;
+
+    private Button btnM240iPColor,btnM240iWColor,btnComBColor,btnComGColor;
     private ImageView btnBack;
 
     // TODO: Rename parameter arguments, choose names that match
@@ -73,22 +72,18 @@ public class Series2Fragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-        ivSeries2=getView().findViewById(R.id.imSeries2Series2);
-       ivM240i=getView().findViewById(R.id.ivm240iwSeries2);
-        tvM240i=getView().findViewById(R.id.tvM240iSeries2);
-        tvM240iPrice=getView().findViewById(R.id.tvM240PraiceSeries2);
-        btnWColor=getView().findViewById(R.id.btnWColorSeries2);
-        btnPColor=getView().findViewById(R.id.btnPColorSeries2);
+        btnM240iWColor=getView().findViewById(R.id.btnWColorSeries2);
+        btnM240iPColor=getView().findViewById(R.id.btnPColorSeries2);
         btnBack=getView().findViewById(R.id.btnBackSeries2);
-        btnBColor=getView().findViewById(R.id.btnBlackSeries2);
-        btnGColor=getView().findViewById(R.id.btnGraySeries2);
-        btnBColor.setOnClickListener(new View.OnClickListener() {
+        btnComBColor=getView().findViewById(R.id.btnBlackSeries2);
+        btnComGColor=getView().findViewById(R.id.btnGraySeries2);
+        btnComBColor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 gotoM2competitionBlackFragment();
             }
         });
-        btnGColor.setOnClickListener(new View.OnClickListener() {
+        btnComGColor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 gotoM2competitionGrayFragment();
@@ -101,13 +96,13 @@ public class Series2Fragment extends Fragment {
                 gotoSeriesListFragment();
             }
         });
-        btnWColor.setOnClickListener(new View.OnClickListener() {
+        btnM240iWColor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 gotoM240iWhiteFragment();
             }
         });
-        btnPColor.setOnClickListener(new View.OnClickListener() {
+        btnM240iPColor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 gotoM240iPurpleFragment();

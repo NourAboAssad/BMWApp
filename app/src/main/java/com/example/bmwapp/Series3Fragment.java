@@ -3,10 +3,14 @@ package com.example.bmwapp;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -14,6 +18,9 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class Series3Fragment extends Fragment {
+
+    private Button btnCSGreenColor,btnCSGrayColor,btnComGreenColor,btnComBlackColor;
+    private ImageView btnBack;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -60,5 +67,71 @@ public class Series3Fragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_series3, container, false);
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        btnComBlackColor=getView().findViewById(R.id.btnComBlackSeries3);
+        btnComGreenColor=getView().findViewById(R.id.btnComGreenSeries3);
+        btnCSGrayColor=getView().findViewById(R.id.btnCSGraySeries3);
+        btnCSGreenColor=getView().findViewById(R.id.btnCSGreenSeries3);
+        btnBack=getView().findViewById(R.id.btnBackSeries3);
+        btnCSGreenColor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoM3CSGreenFragment();
+            }
+        });
+        btnCSGrayColor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoM3CSGrayFragment();
+            }
+        });
+        btnComBlackColor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoM3CompetitionBlackFragment();
+            }
+        });
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoSeriesListFragment();
+            }
+        });
+        btnComGreenColor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoM3CompetitionGreenFragment();
+            }
+        });
+
+    }
+    private void gotoM3CompetitionBlackFragment() {
+        FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.FrameLayoutMain,new M3CompetitionBlackFragment());
+        ft.commit();
+    }
+    private void gotoM3CompetitionGreenFragment() {
+        FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.FrameLayoutMain,new M3CompetitionGreenFragment());
+        ft.commit();
+    }
+    private void gotoSeriesListFragment() {
+        FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.FrameLayoutMain,new SeriesListFragment());
+        ft.commit();
+    }
+    private void gotoM3CSGrayFragment() {
+        FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.FrameLayoutMain,new M3CSGrayFragment());
+        ft.commit();
+    }
+    private void gotoM3CSGreenFragment() {
+        FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.FrameLayoutMain,new M3CSGreenFragment());
+        ft.commit();
     }
 }

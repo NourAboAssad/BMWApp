@@ -5,13 +5,126 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".SeriesListFragment">
+    tools:context=".Series3Fragment">
+
+    <LinearLayout
+        android:layout_width="420dp"
+        android:layout_height="60dp"
+        android:background="#06A697" >
+
+        <ImageView
+            android:id="@+id/btnBackSeries3"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/baseline_arrow_back_24" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvM240iSeries3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoSizeTextType="none"
+        android:elegantTextHeight="true"
+        android:text="m3 cs 2023 "
+        android:textColor="#070707"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="262dp"
+        tools:layout_editor_absoluteY="181dp" />
+
+    <TextView
+        android:id="@+id/tvM240PriceSeries3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$259,000"
+        android:textColor="#0B0A0A"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="275dp"
+        tools:layout_editor_absoluteY="250dp" />
+
+
+
+    <Button
+        android:id="@+id/btnCSGraySeries3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#757373"
+        tools:layout_editor_absoluteX="247dp"
+        tools:layout_editor_absoluteY="311dp" />
+
+    <Button
+        android:id="@+id/btnCSGreenSeries3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#25B82B"
+        tools:layout_editor_absoluteX="329dp"
+        tools:layout_editor_absoluteY="311dp" />
+
+    <TextView
+        android:id="@+id/tvMComSeries3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="M3 competition 2023"
+        android:textColor="#090909"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="183dp"
+        tools:layout_editor_absoluteY="422dp" />
+
+    <TextView
+        android:id="@+id/tvMComPriceSeries3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$182,000"
+        android:textColor="#090909"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="262dp"
+        tools:layout_editor_absoluteY="481dp" />
+
+    <Button
+        android:id="@+id/btnComBlackSeries3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@color/black"
+        tools:layout_editor_absoluteX="247dp"
+        tools:layout_editor_absoluteY="535dp" />
+
+    <Button
+        android:id="@+id/btnComGreenSeries3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#28572A"
+        tools:layout_editor_absoluteX="318dp"
+        tools:layout_editor_absoluteY="535dp" />
 
     <ImageView
-        android:id="@+id/ivSeries3Series3"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:src="@drawable/img_3"
-        tools:layout_editor_absoluteX="105dp"
-        tools:layout_editor_absoluteY="-14dp" />
+        android:id="@+id/ivM3CSGSeries3"
+        android:layout_width="240dp"
+        android:layout_height="250dp"
+        android:src="@drawable/m3csgreen"
+        tools:layout_editor_absoluteX="-3dp"
+        tools:layout_editor_absoluteY="136dp" />
+
+    <ImageView
+        android:id="@+id/ivmComBlackSeries3"
+        android:layout_width="240dp"
+        android:layout_height="250dp"
+        android:src="@drawable/m3comb"
+        tools:layout_editor_absoluteX="-3dp"
+        tools:layout_editor_absoluteY="408dp" />
+
+    <ImageView
+        android:id="@+id/btnSettingsSeries3"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/baseline_menu_24"
+        tools:layout_editor_absoluteX="350dp"
+        tools:layout_editor_absoluteY="2dp" />
+
+    <ImageView
+        android:id="@+id/imSeries3Series3"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:src="@drawable/series3"
+        tools:layout_editor_absoluteX="59dp"
+        tools:layout_editor_absoluteY="62dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

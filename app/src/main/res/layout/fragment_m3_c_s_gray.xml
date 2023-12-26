@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".SeriesListFragment">
+
+    <LinearLayout
+        android:layout_width="420dp"
+        android:layout_height="60dp"
+        android:background="#06A697" />
+
+
+    <ImageView
+        android:id="@+id/ivM3CSGray"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/m3csgray"
+        tools:layout_editor_absoluteX="80dp"
+        tools:layout_editor_absoluteY="36dp" />
+
+    <ImageView
+        android:id="@+id/btnBackM3CSGray"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/baseline_arrow_back_24" />
+
+    <ImageView
+        android:id="@+id/btnSettingsM3CSGray"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/baseline_menu_24"
+        tools:layout_editor_absoluteX="350dp"
+        tools:layout_editor_absoluteY="2dp" />
+
+    <TextView
+        android:id="@+id/tvModelM3CSGray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbarSize="100dp"
+        android:text="model : M3 cs"
+        android:textColor="#0E0E0E"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="21dp"
+        tools:layout_editor_absoluteY="231dp" />
+
+    <TextView
+        android:id="@+id/tvColorM3CSGray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="color : Gray"
+        android:textColor="#020202"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="21dp"
+        tools:layout_editor_absoluteY="286dp" />
+
+    <TextView
+        android:id="@+id/tvYearM3CSGray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="year : 2023"
+        android:textColor="#040303"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="21dp"
+        tools:layout_editor_absoluteY="337dp" />
+
+    <TextView
+        android:id="@+id/tvPriceM3CSGray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="price : $259,000"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="21dp"
+        tools:layout_editor_absoluteY="394dp" />
+
+    <TextView
+        android:id="@+id/tvCylinderM3CSGray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="cylinder : 6"
+        android:textColor="#050505"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="21dp"
+        tools:layout_editor_absoluteY="444dp" />
+
+    <TextView
+        android:id="@+id/tvHPM3CSGray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="horsepower : 543"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="21dp"
+        tools:layout_editor_absoluteY="487dp" />
+
+    <TextView
+        android:id="@+id/tvNMM3CSGray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NM : 650"
+        android:textColor="#0C0C0C"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="534dp" />
+
+    <TextView
+        android:id="@+id/tvEngineM3CSGray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="engineDisplacement : 3.0L"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="21dp"
+        tools:layout_editor_absoluteY="583dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btnlogin"
+        android:text="o"
+        tools:layout_editor_absoluteX="120dp"
+        tools:layout_editor_absoluteY="645dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
