@@ -3,10 +3,12 @@ package com.example.bmwapp;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -14,6 +16,7 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class M3CompetitionGreenFragment extends Fragment {
+    private Button btnBack;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -60,5 +63,21 @@ public class M3CompetitionGreenFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_m3_competition_green, container, false);
+    }
+    @Override
+    public void onStart() {
+        super.onStart();
+        btnBack=getView().findViewById(R.id.btnBackM3CompetitionGreen);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoSeries3Fragment();
+            }
+        });
+    }
+    private void gotoSeries3Fragment() {
+        FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.FrameLayoutMain,new Series3Fragment());
+        ft.commit();
     }
 }

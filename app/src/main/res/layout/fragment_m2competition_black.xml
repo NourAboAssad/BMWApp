@@ -8,10 +8,10 @@
     tools:context=".SeriesListFragment">
 
     <LinearLayout
+        android:id="@+id/linearLayout6"
         android:layout_width="420dp"
         android:layout_height="60dp"
-        android:background="#06A697"
-        />
+        android:background="#06A697" />
 
 
     <ImageView
@@ -19,22 +19,27 @@
         android:layout_width="250dp"
         android:layout_height="200dp"
         android:src="@drawable/m2comb"
-        tools:layout_editor_absoluteX="69dp"
-        tools:layout_editor_absoluteY="42dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.088" />
 
     <ImageView
         android:id="@+id/btnBackM2competitionBlack"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:src="@drawable/baseline_arrow_back_24" />
+        android:src="@drawable/baseline_arrow_back_24"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/btnSettingsM2competitionBlack"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:src="@drawable/baseline_menu_24"
-        tools:layout_editor_absoluteX="350dp"
-        tools:layout_editor_absoluteY="2dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvModelM2competitionBlack"
@@ -44,8 +49,12 @@
         android:text="model : M2 competition"
         android:textColor="#0E0E0E"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="21dp"
-        tools:layout_editor_absoluteY="231dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.101"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.353" />
 
     <TextView
         android:id="@+id/tvColorM2competitionBlack"
@@ -54,8 +63,12 @@
         android:text="color : black"
         android:textColor="#020202"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="21dp"
-        tools:layout_editor_absoluteY="286dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.42" />
 
     <TextView
         android:id="@+id/tvYearM2competitionBlack"
@@ -64,8 +77,12 @@
         android:text="horsepower : 453"
         android:textColor="#040303"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="21dp"
-        tools:layout_editor_absoluteY="337dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.483" />
 
     <TextView
         android:id="@+id/tvPriceM2competitionBlack"
@@ -74,8 +91,12 @@
         android:text="year : 2023"
         android:textColor="#000000"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="21dp"
-        tools:layout_editor_absoluteY="394dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.054"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.553" />
 
     <TextView
         android:id="@+id/tvCylinderM2competitionBlack"
@@ -84,8 +105,12 @@
         android:text="price : $123,000"
         android:textColor="#050505"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="21dp"
-        tools:layout_editor_absoluteY="444dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.065"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.622" />
 
     <TextView
         android:id="@+id/tvHPM2competitionBlack"
@@ -94,8 +119,12 @@
         android:text="NM : 560"
         android:textColor="#000000"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="21dp"
-        tools:layout_editor_absoluteY="487dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.69" />
 
     <TextView
         android:id="@+id/tvNMM2competitionBlack"
@@ -104,8 +133,12 @@
         android:text="cylinder : 6"
         android:textColor="#0C0C0C"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="24dp"
-        tools:layout_editor_absoluteY="534dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.762" />
 
     <TextView
         android:id="@+id/tvEngineM2competitionBlack"
@@ -114,14 +147,23 @@
         android:text="engineDisplacement : 3.0L"
         android:textColor="#000000"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="21dp"
-        tools:layout_editor_absoluteY="583dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.123"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.832" />
+
     <Button
         android:id="@+id/button"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:background="@drawable/btnlogin"
         android:text="o"
-        tools:layout_editor_absoluteX="120dp"
-        tools:layout_editor_absoluteY="645dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.947" />
 </androidx.constraintlayout.widget.ConstraintLayout>

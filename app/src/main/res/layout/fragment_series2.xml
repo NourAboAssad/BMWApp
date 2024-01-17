@@ -8,16 +8,30 @@
     tools:context=".SeriesListFragment">
 
     <LinearLayout
+        android:id="@+id/linearLayout3"
         android:layout_width="420dp"
         android:layout_height="60dp"
-        android:background="#06A697" >
+
+        android:background="#06A697">
 
         <ImageView
             android:id="@+id/btnBackSeries2"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:src="@drawable/baseline_arrow_back_24" />
+
+
+
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/btnSettingsSeries2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/baseline_menu_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <TextView
         android:id="@+id/tvM240iSeries2"
@@ -28,8 +42,12 @@
         android:text="M240i  2023"
         android:textColor="#070707"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="262dp"
-        tools:layout_editor_absoluteY="181dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.939"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.265" />
 
     <TextView
         android:id="@+id/tvM240PraiceSeries2"
@@ -38,26 +56,36 @@
         android:text="$108,000"
         android:textColor="#0B0A0A"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="275dp"
-        tools:layout_editor_absoluteY="250dp" />
-
-
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.868"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout3"
+        app:layout_constraintVertical_bias="0.346" />
 
     <Button
         android:id="@+id/btnWColorSeries2"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="#F3ECEC"
-        tools:layout_editor_absoluteX="247dp"
-        tools:layout_editor_absoluteY="311dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.684"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.456" />
 
     <Button
         android:id="@+id/btnPColorSeries2"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="#482E73"
-        tools:layout_editor_absoluteX="329dp"
-        tools:layout_editor_absoluteY="311dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.456" />
 
     <TextView
         android:id="@+id/tvMComSeries2"
@@ -66,8 +94,12 @@
         android:text="M2 competition 2023"
         android:textColor="#090909"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="183dp"
-        tools:layout_editor_absoluteY="422dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.994"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.608" />
 
     <TextView
         android:id="@+id/tvMComPraiceSeries2"
@@ -76,55 +108,71 @@
         android:text="$123,000"
         android:textColor="#090909"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="262dp"
-        tools:layout_editor_absoluteY="481dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.837"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.687" />
 
     <Button
         android:id="@+id/btnBlackSeries2"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@color/black"
-        tools:layout_editor_absoluteX="247dp"
-        tools:layout_editor_absoluteY="535dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.684"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.785" />
 
     <Button
         android:id="@+id/btnGraySeries2"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="#554E4E"
-        tools:layout_editor_absoluteX="318dp"
-        tools:layout_editor_absoluteY="535dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.88"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.785" />
 
     <ImageView
         android:id="@+id/ivm240iwSeries2"
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:src="@drawable/m240iw"
-        tools:layout_editor_absoluteX="-3dp"
-        tools:layout_editor_absoluteY="136dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.247" />
 
     <ImageView
         android:id="@+id/ivmComBlackSeries2"
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:src="@drawable/m2comb"
-        tools:layout_editor_absoluteX="-3dp"
-        tools:layout_editor_absoluteY="408dp" />
-
-    <ImageView
-        android:id="@+id/btnSettingsSeries2"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:src="@drawable/baseline_menu_24"
-        tools:layout_editor_absoluteX="350dp"
-        tools:layout_editor_absoluteY="2dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.846" />
 
     <ImageView
         android:id="@+id/imSeries2Series2"
         android:layout_width="300dp"
         android:layout_height="100dp"
         android:src="@drawable/series2"
-        tools:layout_editor_absoluteX="59dp"
-        tools:layout_editor_absoluteY="62dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.522"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.095" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

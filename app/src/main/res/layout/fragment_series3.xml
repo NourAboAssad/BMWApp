@@ -5,12 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".Series3Fragment">
+    tools:context=".SeriesListFragment">
 
     <LinearLayout
+        android:id="@+id/linearLayout13"
         android:layout_width="420dp"
         android:layout_height="60dp"
-        android:background="#06A697" >
+        android:background="#06A697">
 
         <ImageView
             android:id="@+id/btnBackSeries3"
@@ -28,8 +29,13 @@
         android:text="m3 cs 2023 "
         android:textColor="#070707"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="262dp"
-        tools:layout_editor_absoluteY="181dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.885"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.268" />
+
 
     <TextView
         android:id="@+id/tvM240PriceSeries3"
@@ -38,93 +44,131 @@
         android:text="$259,000"
         android:textColor="#0B0A0A"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="275dp"
-        tools:layout_editor_absoluteY="250dp" />
-
-
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.84"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.349" />
 
     <Button
         android:id="@+id/btnCSGraySeries3"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="#757373"
-        tools:layout_editor_absoluteX="247dp"
-        tools:layout_editor_absoluteY="311dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.686"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.456" />
 
     <Button
         android:id="@+id/btnCSGreenSeries3"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="#25B82B"
-        tools:layout_editor_absoluteX="329dp"
-        tools:layout_editor_absoluteY="311dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.88"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.456" />
 
     <TextView
-        android:id="@+id/tvMComSeries3"
+        android:id="@+id/tvM3ComSeries3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="M3 competition 2023"
         android:textColor="#090909"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="183dp"
-        tools:layout_editor_absoluteY="422dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.913"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.592" />
 
     <TextView
-        android:id="@+id/tvMComPriceSeries3"
+        android:id="@+id/tvM3ComPriceSeries3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="$182,000"
         android:textColor="#090909"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="262dp"
-        tools:layout_editor_absoluteY="481dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.785"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.661" />
 
     <Button
         android:id="@+id/btnComBlackSeries3"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@color/black"
-        tools:layout_editor_absoluteX="247dp"
-        tools:layout_editor_absoluteY="535dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.686"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.785" />
 
     <Button
         android:id="@+id/btnComGreenSeries3"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="#28572A"
-        tools:layout_editor_absoluteX="318dp"
-        tools:layout_editor_absoluteY="535dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.88"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.785" />
 
     <ImageView
         android:id="@+id/ivM3CSGSeries3"
         android:layout_width="240dp"
         android:layout_height="250dp"
         android:src="@drawable/m3csgreen"
-        tools:layout_editor_absoluteX="-3dp"
-        tools:layout_editor_absoluteY="136dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout13"
+        app:layout_constraintVertical_bias="0.318" />
 
     <ImageView
         android:id="@+id/ivmComBlackSeries3"
-        android:layout_width="240dp"
+        android:layout_width="230dp"
         android:layout_height="250dp"
         android:src="@drawable/m3comb"
-        tools:layout_editor_absoluteX="-3dp"
-        tools:layout_editor_absoluteY="408dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.837" />
 
     <ImageView
         android:id="@+id/btnSettingsSeries3"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:src="@drawable/baseline_menu_24"
-        tools:layout_editor_absoluteX="350dp"
-        tools:layout_editor_absoluteY="2dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imSeries3Series3"
         android:layout_width="300dp"
         android:layout_height="100dp"
         android:src="@drawable/series3"
-        tools:layout_editor_absoluteX="59dp"
-        tools:layout_editor_absoluteY="62dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.531"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.083" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

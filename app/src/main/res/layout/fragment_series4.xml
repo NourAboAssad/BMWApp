@@ -6,4 +6,169 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     tools:context=".SeriesListFragment">
+
+    <LinearLayout
+        android:id="@+id/linearLayout14"
+        android:layout_width="420dp"
+        android:layout_height="60dp"
+        android:background="#06A697">
+
+        <ImageView
+            android:id="@+id/btnBackSeries4"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/baseline_arrow_back_24" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvM4CslSeries4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoSizeTextType="none"
+        android:elegantTextHeight="true"
+        android:text="m4 csl 2023 "
+        android:textColor="#070707"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.901"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.263" />
+
+
+    <TextView
+        android:id="@+id/tvM4CslPriceSeries4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$308,000"
+        android:textColor="#0B0A0A"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.84"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.35" />
+
+    <Button
+        android:id="@+id/btnCSlGraySeries4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#757373"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.684"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.456" />
+
+    <Button
+        android:id="@+id/btnCSlWhiteSeries4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#D9E4D9"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.88"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.456" />
+
+    <TextView
+        android:id="@+id/tvM4ComSeries4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="M4 competition 2023"
+        android:textColor="#090909"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.913"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.6" />
+
+    <TextView
+        android:id="@+id/tvM4ComPriceSeries4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$180,000"
+        android:textColor="#090909"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.816"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.666" />
+
+    <Button
+        android:id="@+id/btnComYellowSeries4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#72CA0B"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.686"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.785" />
+
+    <Button
+        android:id="@+id/btnComGreenSeries4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#009688"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.88"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.785" />
+
+    <ImageView
+        android:id="@+id/ivM4CSlSeries4"
+        android:layout_width="240dp"
+        android:layout_height="250dp"
+        android:src="@drawable/m4cslgray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.303" />
+
+    <ImageView
+        android:id="@+id/ivmComYellowSeries4"
+        android:layout_width="240dp"
+        android:layout_height="250dp"
+        android:src="@drawable/m4comyellow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.823" />
+
+    <ImageView
+        android:id="@+id/btnSettingsSeries4"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/baseline_menu_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imSeries4Series4"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:src="@drawable/series4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.531"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.095" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

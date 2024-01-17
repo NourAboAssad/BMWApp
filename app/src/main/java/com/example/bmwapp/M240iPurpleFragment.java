@@ -67,7 +67,7 @@ public class M240iPurpleFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-        btnBack=getView().findViewById(R.id.btnBackM240iW);
+        btnBack=getView().findViewById(R.id.btnBackM240iP);
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

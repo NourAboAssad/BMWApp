@@ -5,36 +5,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".M3CompetitionBlackFragment">
+    tools:context=".SeriesListFragment">
 
     <LinearLayout
-        android:id="@+id/linearLayout8"
+        android:id="@+id/linearLayout11"
         android:layout_width="420dp"
         android:layout_height="60dp"
         android:background="#06A697" />
 
 
     <ImageView
-        android:id="@+id/ivM3CompetitionBlack"
+        android:id="@+id/ivM4CslGray"
         android:layout_width="250dp"
         android:layout_height="250dp"
-        android:src="@drawable/m3comb"
+        android:src="@drawable/m4cslgray"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.434"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.033" />
+        app:layout_constraintVertical_bias="0.056" />
 
     <ImageView
-        android:id="@+id/btnBackM3CompetitionBlack"
+        android:id="@+id/btnBackM4CSlGray"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:src="@drawable/baseline_arrow_back_24"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/btnSettingsM3CompetitionBlack"
+        android:id="@+id/btnSettingsM4CSlGray"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:src="@drawable/baseline_menu_24"
@@ -42,36 +42,36 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvModelM3CompetitionBlack"
+        android:id="@+id/tvModelM4CSlGray"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:scrollbarSize="100dp"
-        android:text="model : M3 Competition"
+        android:text="model : M4 csl"
         android:textColor="#0E0E0E"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.135"
+        app:layout_constraintHorizontal_bias="0.082"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.334" />
+        app:layout_constraintVertical_bias="0.340" />
 
     <TextView
-        android:id="@+id/tvColorM3CompetitionBlack"
+        android:id="@+id/tvColorM4CSlGray"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="color : Black"
+        android:text="color : Gray"
         android:textColor="#020202"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.074"
+        app:layout_constraintHorizontal_bias="0.072"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.407" />
+        app:layout_constraintVertical_bias="0.409" />
 
     <TextView
-        android:id="@+id/tvYearM3CompetitionBlack"
+        android:id="@+id/tvYearM4CSlGray"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="year : 2023"
@@ -85,21 +85,21 @@
         app:layout_constraintVertical_bias="0.482" />
 
     <TextView
-        android:id="@+id/tvPriceM3CompetitionBlack"
+        android:id="@+id/tvPriceM4CSlGray"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="price : $182,000 "
+        android:text="price : $308,000"
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.088"
+        app:layout_constraintHorizontal_bias="0.086"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.550" />
+        app:layout_constraintVertical_bias="0.557" />
 
     <TextView
-        android:id="@+id/tvCylinderM3CompetitionBlack"
+        android:id="@+id/tvCylinderM4CSlGray"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="cylinder : 6"
@@ -110,13 +110,13 @@
         app:layout_constraintHorizontal_bias="0.07"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.620" />
+        app:layout_constraintVertical_bias="0.626" />
 
     <TextView
-        android:id="@+id/tvHPM3CompetitionBlack"
+        android:id="@+id/tvHPM4CSlGray"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="horsepower : 503"
+        android:text="horsepower : 543"
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -124,13 +124,13 @@
         app:layout_constraintHorizontal_bias="0.092"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.690" />
+        app:layout_constraintVertical_bias="0.699" />
 
     <TextView
-        android:id="@+id/tvNMM3CompetitionBlack"
+        android:id="@+id/tvNMM4CSlGray"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="NM : 650"
+        android:text="NM : 649"
         android:textColor="#0C0C0C"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -138,10 +138,10 @@
         app:layout_constraintHorizontal_bias="0.066"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.762" />
+        app:layout_constraintVertical_bias="0.771" />
 
     <TextView
-        android:id="@+id/tvEngineM3CompetitionBlack"
+        android:id="@+id/tvEngineM4CSlGray"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="engineDisplacement : 3.0L"
@@ -152,7 +152,7 @@
         app:layout_constraintHorizontal_bias="0.161"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.830" />
+        app:layout_constraintVertical_bias="0.839" />
 
     <Button
         android:id="@+id/button"
@@ -165,5 +165,5 @@
         app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.942" />
+        app:layout_constraintVertical_bias="0.95" />
 </androidx.constraintlayout.widget.ConstraintLayout>
