@@ -3,10 +3,12 @@ package com.example.bmwapp;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -14,6 +16,8 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class M4CslWhiteFragment extends Fragment {
+    private ImageView btnSettings;
+    private ImageView btnBack;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -60,5 +64,33 @@ public class M4CslWhiteFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_m4_csl_white, container, false);
+    }
+    @Override
+    public void onStart() {
+        super.onStart();
+        btnBack=getView().findViewById(R.id.btnBackM4CSlWhite);
+        btnSettings=getView().findViewById(R.id.btnSettingsM4CSlWhite);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoSeries4Fragment();
+            }
+        });
+        btnSettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoSettingsFragment();
+            }
+        });
+    }
+    private void gotoSeries4Fragment() {
+        FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.FrameLayoutMain,new Series4Fragment());
+        ft.commit();
+    }
+    private void gotoSettingsFragment() {
+        FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.FrameLayoutMain,new SettingsFragment());
+        ft.commit();
     }
 }

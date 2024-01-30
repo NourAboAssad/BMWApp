@@ -17,6 +17,7 @@ import android.widget.ImageView;
  */
 public class M240iPurpleFragment extends Fragment {
     private ImageView btnBack;
+    private ImageView btnSettings;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -68,16 +69,28 @@ public class M240iPurpleFragment extends Fragment {
     public void onStart() {
         super.onStart();
         btnBack=getView().findViewById(R.id.btnBackM240iP);
+        btnSettings=getView().findViewById(R.id.btnSettingsM240iP);
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 gotoSeries2Fragment();
             }
         });
+        btnSettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoSettingsFragment();
+            }
+        });
     }
     private void gotoSeries2Fragment() {
         FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.FrameLayoutMain,new Series2Fragment());
+        ft.commit();
+    }
+    private void gotoSettingsFragment() {
+        FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.FrameLayoutMain,new SettingsFragment());
         ft.commit();
     }
 }

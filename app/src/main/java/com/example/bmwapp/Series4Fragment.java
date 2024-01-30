@@ -19,6 +19,7 @@ import android.widget.ImageView;
 public class Series4Fragment extends Fragment {
     private Button btnCSlGrayColor,btnCSlWhiteColor,btnComGreenColor,btnComYellowColor;
     private ImageView btnBack;
+    private ImageView btnSettings;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -75,6 +76,13 @@ public class Series4Fragment extends Fragment {
         btnCSlGrayColor=getView().findViewById(R.id.btnCSlGraySeries4);
         btnCSlWhiteColor=getView().findViewById(R.id.btnCSlWhiteSeries4);
         btnBack=getView().findViewById(R.id.btnBackSeries4);
+        btnSettings=getView().findViewById(R.id.btnSettingsSeries4);
+        btnSettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoSettingsFragment();
+            }
+        });
         btnCSlGrayColor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -130,6 +138,11 @@ public class Series4Fragment extends Fragment {
     private void gotoM4CompetitionGreenFragment() {
         FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.FrameLayoutMain,new M4CompetitionGreenFragment());
+        ft.commit();
+    }
+    private void gotoSettingsFragment() {
+        FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.FrameLayoutMain,new SettingsFragment());
         ft.commit();
     }
 }

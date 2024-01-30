@@ -21,6 +21,7 @@ public class Series2Fragment extends Fragment {
 
     private Button btnM240iPColor,btnM240iWColor,btnComBColor,btnComGColor;
     private ImageView btnBack;
+    private ImageView btnSettings;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -77,6 +78,13 @@ public class Series2Fragment extends Fragment {
         btnBack=getView().findViewById(R.id.btnBackSeries2);
         btnComBColor=getView().findViewById(R.id.btnBlackSeries2);
         btnComGColor=getView().findViewById(R.id.btnGraySeries2);
+        btnSettings=getView().findViewById(R.id.btnSettingsSeries2);
+        btnSettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoSettingsFragment();
+            }
+        });
         btnComBColor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -133,6 +141,11 @@ public class Series2Fragment extends Fragment {
     private void gotoM2competitionGrayFragment() {
         FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.FrameLayoutMain,new M2competitionGrayFragment());
+        ft.commit();
+    }
+    private void gotoSettingsFragment() {
+        FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.FrameLayoutMain,new SettingsFragment());
         ft.commit();
     }
 }

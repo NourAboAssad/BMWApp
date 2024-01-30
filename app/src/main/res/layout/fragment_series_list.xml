@@ -15,7 +15,7 @@
         android:background="#30ff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="3.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.835" />
@@ -25,7 +25,20 @@
         android:layout_width="400dp"
         android:layout_height="400dp"
         android:src="@drawable/img"
-        tools:layout_editor_absoluteX="5dp"
-        tools:layout_editor_absoluteY="2dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivSettingsSeriesList"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/settings"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.982"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.002" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

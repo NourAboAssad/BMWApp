@@ -21,6 +21,7 @@ public class Series3Fragment extends Fragment {
 
     private Button btnCSGreenColor,btnCSGrayColor,btnComGreenColor,btnComBlackColor;
     private ImageView btnBack;
+    private ImageView btnSettings;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -77,6 +78,13 @@ public class Series3Fragment extends Fragment {
         btnCSGrayColor=getView().findViewById(R.id.btnCSGraySeries3);
         btnCSGreenColor=getView().findViewById(R.id.btnCSGreenSeries3);
         btnBack=getView().findViewById(R.id.btnBackSeries3);
+        btnSettings=getView().findViewById(R.id.btnSettingsSeries3);
+        btnSettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoSettingsFragment();
+            }
+        });
         btnCSGreenColor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -132,6 +140,11 @@ public class Series3Fragment extends Fragment {
     private void gotoM3CSGreenFragment() {
         FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.FrameLayoutMain,new M3CSGreenFragment());
+        ft.commit();
+    }
+    private void gotoSettingsFragment() {
+        FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.FrameLayoutMain,new SettingsFragment());
         ft.commit();
     }
 }

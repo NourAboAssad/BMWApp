@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -22,6 +23,7 @@ import java.util.List;
  */
 public class SeriesListFragment extends Fragment {
     private ListView lvSeriesList;
+    private ImageView btnSettings;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -78,6 +80,13 @@ public class SeriesListFragment extends Fragment {
 
     private void connectComponents() {
         ListView lvSeriesList= getView().findViewById(R.id.rvSeriesListSeriesListFragment);
+        btnSettings=getView().findViewById(R.id.ivSettingsSeriesList);
+        btnSettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoSettingsFragment();
+            }
+        });
         List<String> list=new ArrayList<>();
         list.add("Series2");
         list.add("Series3");
@@ -118,6 +127,11 @@ public class SeriesListFragment extends Fragment {
     private void gotoSeries4Fragment() {
         FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.FrameLayoutMain,new Series4Fragment());
+        ft.commit();
+    }
+    private void gotoSettingsFragment() {
+        FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.FrameLayoutMain,new SettingsFragment());
         ft.commit();
     }
 }

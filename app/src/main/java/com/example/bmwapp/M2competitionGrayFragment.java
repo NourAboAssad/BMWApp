@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -17,6 +18,7 @@ import android.widget.Button;
  */
 public class M2competitionGrayFragment extends Fragment {
     private Button btnBack;
+    private ImageView btnSettings;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -68,16 +70,28 @@ public class M2competitionGrayFragment extends Fragment {
     public void onStart() {
         super.onStart();
         btnBack=getView().findViewById(R.id.btnBackM2competitionGray);
+        btnSettings=getView().findViewById(R.id.btnSettingsM2competitionGray);
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 gotoSeries2Fragment();
             }
         });
+        btnSettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoSettingsFragment();
+            }
+        });
     }
     private void gotoSeries2Fragment() {
         FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.FrameLayoutMain,new Series2Fragment());
+        ft.commit();
+    }
+    private void gotoSettingsFragment() {
+        FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.FrameLayoutMain,new SettingsFragment());
         ft.commit();
     }
 }
