@@ -1,16 +1,20 @@
 package com.example.bmwapp;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -23,9 +27,13 @@ import com.google.firebase.firestore.DocumentReference;
  * create an instance of this fragment.
  */
 public class AddCarFragment extends Fragment {
+    private static final int GALLERY_REQUEST_CODE = 123;
+    private Utils utils;
     FirebaseServices fbs;
     private EditText etYear,etColor,etEngineDisplacement,etPrice,etMn,etHorsepower,etCylinder,etModel;
     private Button btnAdd;
+    private ImageView img;
+
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -80,6 +88,8 @@ public class AddCarFragment extends Fragment {
     }
 
     private void connectComponents() {
+        img = getView().findViewById(R.id.ivCarAddCarFragment);
+        utils = Utils.getInstance();
         fbs = FirebaseServices.getInstance();
         etYear = getView().findViewById(R.id.etYearAddCarFragment);
         etColor = getView().findViewById(R.id.etColorAddCarFragment);
@@ -112,7 +122,7 @@ public class AddCarFragment extends Fragment {
                 }
 
                 // add data to firestore
-                Car rest = new Car(color, year, model, price,cylinder,horsePower,mn,engineDisplacement);
+                Car rest = new Car(year, model, color, price,cylinder,horsePower,mn,engineDisplacement,fbs.getSelectedImageURL().toString());
 
                 fbs.getFire().collection("cars").add(rest).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @Override
@@ -131,5 +141,18 @@ public class AddCarFragment extends Fragment {
         });
 
 
+    }
+    private void openGallery() {
+        Intent galleryIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+        startActivityForResult(galleryIntent, GALLERY_REQUEST_CODE);
+    }
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == GALLERY_REQUEST_CODE && resultCode == getActivity().RESULT_OK && data != null) {
+            Uri selectedImageUri = data.getData();
+            img.setImageURI(selectedImageUri);
+            utils.uploadImage(getActivity(), selectedImageUri);
+        }
     }
 }
