@@ -3,12 +3,54 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backbmw"
     tools:context=".SettingsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
+
+
+        <Button
+            android:id="@+id/btnLogoutSettingsFragment"
+
+            android:layout_width="192dp"
+            android:layout_height="53dp"
+            android:backgroundTint="#12A395"
+            android:text="LogOut"
+            tools:layout_editor_absoluteX="109dp"
+            tools:layout_editor_absoluteY="300dp" />
+
+        <Button
+            android:id="@+id/btnChatSettingsFragment"
+
+            android:layout_width="192dp"
+            android:layout_height="53dp"
+            android:backgroundTint="#12A395"
+            android:text="SMS"
+            tools:layout_editor_absoluteX="109dp"
+            tools:layout_editor_absoluteY="457dp" />
+
+        <Button
+            android:id="@+id/btnGoToListSettingsFragment"
+
+            android:layout_width="192dp"
+            android:layout_height="53dp"
+            android:backgroundTint="#12A395"
+            android:text="Go To Series List"
+            tools:layout_editor_absoluteX="109dp"
+            tools:layout_editor_absoluteY="381dp" />
+
+        <ImageView
+            android:id="@+id/btnBackSettingsFragment"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/back"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

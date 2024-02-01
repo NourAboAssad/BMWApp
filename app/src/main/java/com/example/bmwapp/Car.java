@@ -1,20 +1,20 @@
 package com.example.bmwapp;
 
 public class Car {
-    private Integer year ;
+    private String year ;
     private String model;
     private String color;
-    private Integer price;
-    private Integer cylinder;
-    private Integer horsepower;
-    private Integer MN;
-    private Double engineDisplacement;
+    private String price;
+    private String cylinder;
+    private String horsepower;
+    private String MN;
+    private String engineDisplacement;
     private String photo;
 
     public Car() {
     }
 
-    public Car(Integer year, String model, String color, Integer price, Integer cylinder, Integer horsepower, Integer MN, Double engineDisplacement, String photo) {
+    public Car(String year, String model, String color, String price, String cylinder, String horsepower, String MN, String engineDisplacement, String photo) {
         this.year = year;
         this.model = model;
         this.color = color;
@@ -26,11 +26,26 @@ public class Car {
         this.photo = photo;
     }
 
-    public Integer getYear() {
+    @Override
+    public String toString() {
+        return "Car{" +
+                "year='" + year + '\'' +
+                ", model='" + model + '\'' +
+                ", color='" + color + '\'' +
+                ", price='" + price + '\'' +
+                ", cylinder='" + cylinder + '\'' +
+                ", horsepower='" + horsepower + '\'' +
+                ", MN='" + MN + '\'' +
+                ", engineDisplacement='" + engineDisplacement + '\'' +
+                ", photo='" + photo + '\'' +
+                '}';
+    }
+
+    public String getYear() {
         return year;
     }
 
-    public void setYear(Integer year) {
+    public void setYear(String year) {
         this.year = year;
     }
 
@@ -50,43 +65,43 @@ public class Car {
         this.color = color;
     }
 
-    public Integer getPrice() {
+    public String getPrice() {
         return price;
     }
 
-    public void setPrice(Integer price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 
-    public Integer getCylinder() {
+    public String getCylinder() {
         return cylinder;
     }
 
-    public void setCylinder(Integer cylinder) {
+    public void setCylinder(String cylinder) {
         this.cylinder = cylinder;
     }
 
-    public Integer getHorsepower() {
+    public String getHorsepower() {
         return horsepower;
     }
 
-    public void setHorsepower(Integer horsepower) {
+    public void setHorsepower(String horsepower) {
         this.horsepower = horsepower;
     }
 
-    public Integer getMN() {
+    public String getMN() {
         return MN;
     }
 
-    public void setMN(Integer MN) {
+    public void setMN(String MN) {
         this.MN = MN;
     }
 
-    public Double getEngineDisplacement() {
+    public String getEngineDisplacement() {
         return engineDisplacement;
     }
 
-    public void setEngineDisplacement(Double engineDisplacement) {
+    public void setEngineDisplacement(String engineDisplacement) {
         this.engineDisplacement = engineDisplacement;
     }
 
@@ -96,20 +111,5 @@ public class Car {
 
     public void setPhoto(String photo) {
         this.photo = photo;
-    }
-
-    @Override
-    public String toString() {
-        return "Car{" +
-                "year=" + year +
-                ", model='" + model + '\'' +
-                ", color='" + color + '\'' +
-                ", price=" + price +
-                ", cylinder=" + cylinder +
-                ", horsepower=" + horsepower +
-                ", MN=" + MN +
-                ", engineDisplacement=" + engineDisplacement +
-                ", photo='" + photo + '\'' +
-                '}';
     }
 }

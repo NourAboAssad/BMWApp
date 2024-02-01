@@ -104,17 +104,17 @@ public class AddCarFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 // get data from screen
-                Integer year = Integer.parseInt(etYear.getText().toString());
-                Integer mn = Integer.parseInt(etMn.getText().toString());
-                Integer cylinder= Integer.parseInt(etCylinder.getText().toString());
-                Integer price = Integer.parseInt(etPrice.getText().toString());
-                Integer horsePower = Integer.parseInt(etHorsepower.getText().toString());
+                String year = etHorsepower.getText().toString() ;
+                String mn = etMn.getText().toString() ;
+                String cylinder= etCylinder.getText().toString() ;
+                String price = etPrice.getText().toString() ;
+                String horsePower =etHorsepower.getText().toString() ;
                 String color = etColor.getText().toString();
                 String model = etModel.getText().toString();
-                Double  engineDisplacement=Double.parseDouble(etEngineDisplacement.getText().toString()) ;
+                String  engineDisplacement=etEngineDisplacement.getText().toString()  ;
 
                 // data validation
-                if (color.trim().isEmpty() || model.trim().isEmpty() )
+                if (color.trim().isEmpty() || model.trim().isEmpty()||year.trim().isEmpty()||mn.trim().isEmpty()||cylinder.trim().isEmpty()||price.trim().isEmpty()||horsePower.trim().isEmpty()||engineDisplacement.trim().isEmpty() )
 
                 {
                     Toast.makeText(getActivity(), "Some fields are empty!", Toast.LENGTH_LONG).show();
@@ -122,9 +122,9 @@ public class AddCarFragment extends Fragment {
                 }
 
                 // add data to firestore
-                Car rest = new Car(year, model, color, price,cylinder,horsePower,mn,engineDisplacement,fbs.getSelectedImageURL().toString());
+                Car car = new Car(year, model, color, price,cylinder,horsePower,mn,engineDisplacement,fbs.getSelectedImageURL().toString());
 
-                fbs.getFire().collection("cars").add(rest).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                fbs.getFire().collection("cars").add(car).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @Override
                     public void onSuccess(DocumentReference documentReference) {
                         Toast.makeText(getActivity(), "Successfully added your car!", Toast.LENGTH_SHORT).show();
@@ -139,6 +139,14 @@ public class AddCarFragment extends Fragment {
 
             }
         });
+        img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openGallery();
+            }
+
+        });
+        ((MainActivity)getActivity()).pushFragment(new AddCarFragment());
 
 
     }
