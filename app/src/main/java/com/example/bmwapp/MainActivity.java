@@ -15,11 +15,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        gotoAddCarFragment();
+        gotoAllCarsFragment();
     }
     private void gotoLoginFragment() {
         FragmentTransaction ft= getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.FrameLayoutMain,new LoginFragment());
+        ft.commit();
+    }
+    private void gotoAllCarsFragment() {
+        FragmentTransaction ft= getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.FrameLayoutMain,new AllCarsFragment());
         ft.commit();
     }
     private void gotoAddCarFragment() {

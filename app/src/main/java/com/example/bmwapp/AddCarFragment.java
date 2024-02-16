@@ -122,8 +122,14 @@ public class AddCarFragment extends Fragment {
                 }
 
                 // add data to firestore
-                Car car = new Car(year, model, color, price,cylinder,horsePower,mn,engineDisplacement,fbs.getSelectedImageURL().toString());
-
+                Car car;
+                if (fbs.getSelectedImageURL() == null)
+                {
+                    car = new Car(year, model, color, price,cylinder,horsePower,mn,engineDisplacement,"");
+                }
+                else {
+                    car = new Car(year, model, color, price, cylinder, horsePower, mn, engineDisplacement, fbs.getSelectedImageURL().toString());
+                }
                 fbs.getFire().collection("cars").add(car).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @Override
                     public void onSuccess(DocumentReference documentReference) {

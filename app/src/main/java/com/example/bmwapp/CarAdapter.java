@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -34,6 +35,19 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.MyViewHolder>{
         holder.tvModel.setText(rest.getModel());
         holder.tvYear.setText(rest.getYear());
         holder.tvPrice.setText(rest.getPrice());
+        if (car.getPhoto() == null || car.getPhoto().isEmpty())
+        {
+            Picasso.get().load(R.drawable.ic_fav).into(holder.ivCar);
+        }
+        else {
+            Picasso.get().load(car.getPhoto()).into(holder.ivCar);
+        }
+        holder.ivFavourite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setFavourite(holder, car);
+            }
+        });
 
     }
 
@@ -44,11 +58,13 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.MyViewHolder>{
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
         TextView tvModel,tvPrice,tvYear;
+        ImageView ivCar;
         public MyViewHolder(@NonNull View itemView){
             super(itemView);
             tvModel=itemView.findViewById(R.id.tvModelRestItem);
             tvPrice=itemView.findViewById(R.id.tvPriceRestItem);
             tvYear=itemView.findViewById(R.id.tvYearRestItem);
+            ivCar = itemView.findViewById(R.id.ivCarPhotoItem);
         }
 
     }
