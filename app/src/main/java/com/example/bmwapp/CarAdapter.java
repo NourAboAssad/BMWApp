@@ -10,6 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 
 public class CarAdapter extends RecyclerView.Adapter<CarAdapter.MyViewHolder>{
@@ -31,23 +33,17 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.MyViewHolder>{
 
     @Override
     public void onBindViewHolder(@NonNull CarAdapter.MyViewHolder holder, int position) {
-        Car rest = carList.get(position);
-        holder.tvModel.setText(rest.getModel());
-        holder.tvYear.setText(rest.getYear());
-        holder.tvPrice.setText(rest.getPrice());
+        Car car = carList.get(position);
+        holder.tvModel.setText(car.getModel());
+        holder.tvYear.setText(car.getYear());
+        holder.tvPrice.setText(car.getPrice());
         if (car.getPhoto() == null || car.getPhoto().isEmpty())
         {
-            Picasso.get().load(R.drawable.ic_fav).into(holder.ivCar);
+            //Picasso.get().load(R.drawable.ic_fav).into(holder.ivCar);
         }
         else {
             Picasso.get().load(car.getPhoto()).into(holder.ivCar);
         }
-        holder.ivFavourite.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setFavourite(holder, car);
-            }
-        });
 
     }
 
